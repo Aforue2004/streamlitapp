@@ -9,6 +9,7 @@ import numpy as np
 st.title("Breast Cancer Classification")
 
 # Load the saved model
+@st.cache(allow_output_mutation=True)
 def load_trained_model():
     model = load_model('testmodel2.h5')  # Replace 'testmodel2.h5' with your actual model file
     return model
