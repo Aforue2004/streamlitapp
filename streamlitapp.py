@@ -2,7 +2,6 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
-import cv2
 import numpy as np
 
 # Title of the Streamlit app
@@ -18,14 +17,13 @@ model = load_trained_model()
 
 # Function to preprocess the uploaded image
 def preprocess_image(image):
-    # Convert the PIL image to a NumPy array
-    img_array = np.array(image)
-    # Resize image to match the input size of the model (224x224)
-    img_resized = img_array.resize((224, 224))  # Resize the image using PIL
-    img_resized = img_to_array(img_resized)    # Convert image to array
-    img_resized = np.expand_dims(img_resized, axis=0)  # Add batch dimension
-    img_resized = img_resized / 255.0  # Rescale pixel values to [0, 1]
-    return img_resized
+    # Resize the image using PIL to match the input size of the model (224x224)
+    image = image.resize((224, 224))  
+    # Convert the resized PIL image to a NumPy array
+    img_array = img_to_array(image)  
+    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
+    img_array = img_array / 255.0  # Rescale pixel values to [0, 1]
+    return img_array
 
 # Upload the image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
