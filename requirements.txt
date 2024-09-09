@@ -2,3 +2,4 @@ streamlit
 tensorflow
 opencv2
 numpy
+pillow
