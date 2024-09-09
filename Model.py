@@ -14,7 +14,7 @@ st.title("Breast Cancer Classification")
 # Load the saved model
 @st.cache(allow_output_mutation=True)
 def load_trained_model():
-    model = load_model('C:/Users/Joshua/Desktop/Data science advaned/Breastclassification/Breastcancerclassification.h5')  # Replace with your model path
+    model = load_model('testmodel2.h5')  # Replace with your model path
     return model
 
 
