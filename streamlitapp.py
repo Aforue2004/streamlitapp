@@ -10,7 +10,7 @@ st.title("Breast Cancer Classification")
 # Load the saved model
 @st.cache(allow_output_mutation=True)
 def load_trained_model():
-    model = load_model('BreastCancerClassification.h5')  # Replace 'model_name.h5' with your actual model file
+    model = load_model('testmodel2.h5')  # Replace 'model_name.h5' with your actual model file
     return model
 
 model = load_trained_model()
