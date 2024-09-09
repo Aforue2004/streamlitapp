@@ -38,7 +38,7 @@ if uploaded_file is not None:
     prediction = model.predict(img)
 
     # Define labels (you should replace these with your actual class names)
-    labels = ['Unknown', 'Benign', 'Malignant', 'Normal']  # Modify based on your dataset
+    labels = [benign', 'malignant', 'normal', 'Unknown']  # Modify based on your dataset
 
     # Display the prediction
     st.write("Prediction:", labels[np.argmax(prediction)])
