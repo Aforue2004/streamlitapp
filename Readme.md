@@ -9,7 +9,7 @@ The trained model is deployed using **Streamlit** for an easy-to-use web interfa
 
 ## Dataset Details
 
-* **Source:** \[Insert dataset source name or link here]
+* **Source:** Kaggle
 * **Structure:**
 
   * 4 classes: `Unknown`, `Benign`, `Malignant`, `Normal`
